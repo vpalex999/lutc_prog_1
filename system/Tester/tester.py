@@ -76,7 +76,7 @@ for testpath in testfiles:  # протестировать все сценари
 
     # запустить тестируемый сценарий, перенаправив потоки ввода-вывода
     pypath = sys.executable
-    command = '{} -u {} {}'.format(pypath, testpath, argdata)
+    command = '{} {} {}'.format(pypath, testpath, argdata)
     trace(command, indata)
     process = Popen(command, shell=True, stdin=PIPE, stdout=PIPE, stderr=PIPE)
     process.stdin.write(indata)
