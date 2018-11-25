@@ -30,7 +30,9 @@ def findlist(pattern, startdir=os.curdir, dosort=False):
 
 if __name__ == '__main__':
     import sys
-    print(sys.argv)
-    namepattern, startdir = sys.argv[1], sys.argv[2]
-    for name in findlist(namepattern, startdir):
-        print(name)
+    if len(sys.argv) == 1:
+        print("Use: find.py '*.py', '.'")
+    else:
+        namepattern, startdir = sys.argv[1], sys.argv[2]
+        for name in find(namepattern, startdir):
+            print(name)
