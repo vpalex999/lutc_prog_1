@@ -9,7 +9,6 @@ class Dn(object):
         self.number = number
 
 
-
 def test_sorted():
     dn1 = Dn('3436873639')
     dn2 = Dn('3436842446')
