@@ -3,7 +3,7 @@
 на основе классов
 """
 
-import _thread, queue, time
+import threading, queue, time
 from tkinter.scrolledtext import ScrolledText
 
 
@@ -37,7 +37,7 @@ class ThreadGui(ScrolledText):
 
     def makethreads(self, event):
         for i in range(self.threadsPerClick):
-            _thread.Thread(target=self.producer, args=(i,)).start()
+            threading.Thread(target=self.producer, args=(i,)).start()
 
 
 if __name__ == '__main__':
